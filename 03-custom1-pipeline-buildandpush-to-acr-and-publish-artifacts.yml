@@ -48,9 +48,9 @@ stages:
     # Target Directory: $(Build.ArtifactStagingDirectory)
     - task: CopyFiles@2
       inputs:
-        SourceFolder: '''$(System.DefaultWorkingDirectory)/kube-manifests'''
+        SourceFolder: '$(System.DefaultWorkingDirectory)/kube-manifests'
         Contents: '**'
-        TargetFolder: '''$(Build.ArtifactStagingDirectory)'''
+        TargetFolder: '$(Build.ArtifactStagingDirectory)'
         OverWrite: true
 
     # Task-3: Publish build artifacts (Publish build to Azure Pipelines)

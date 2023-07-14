@@ -56,7 +56,7 @@ stages:
     displayName: Deploy
     pool:
       #vmImage: $(vmImageName)
-      name: $(name)
+      name: 'Default'
     environment: 'akumar4kazuredevopsgithubacraksapp1.default'
     strategy:
       runOnce:

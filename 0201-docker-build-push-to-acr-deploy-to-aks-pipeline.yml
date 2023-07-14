@@ -21,7 +21,7 @@ variables:
   # Agent VM image name
   #vmImageName: 'ubuntu-latest'
   pool:
-  name:'Default'
+   name:'Default'
 
   # Name of the new namespace being created to deploy the PR changes.
   k8sNamespaceForPR: 'review-app-$(System.PullRequest.PullRequestId)'

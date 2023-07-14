@@ -19,8 +19,9 @@ variables:
   imagePullSecret: 'acraks203215409a2d-auth'
 
   # Agent VM image name
-  vmImageName: 'ubuntu-latest'
-
+  #vmImageName: 'ubuntu-latest'
+pool:
+name: 'Default'
 
 stages:
 - stage: Build
@@ -29,7 +30,8 @@ stages:
   - job: Build
     displayName: Build
     pool:
-      vmImage: $(vmImageName)
+      #vmImage: $(vmImageName)
+      name: $(name)
     steps:
     - task: Docker@2
       displayName: Build and push an image to container registry
@@ -52,7 +54,8 @@ stages:
   - deployment: Deploy
     displayName: Deploy
     pool:
-      vmImage: $(vmImageName)
+      #vmImage: $(vmImageName)
+      name: 'Default'
     environment: 'Sarithachinniazuredevopsgithubacraksapp1.default'
     strategy:
       runOnce:

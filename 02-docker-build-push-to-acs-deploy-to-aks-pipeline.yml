@@ -20,7 +20,7 @@ variables:
 
   # Agent VM image name
   #vmImageName: 'ubuntu-latest'
-    pool:
+  pool:
     name: 'Default'
 
 
